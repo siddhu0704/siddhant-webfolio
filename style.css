@@ -1,3 +1,8 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +21,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 85px;
 }
 
 body {
@@ -33,7 +39,6 @@ body {
   padding: 60px 0;
 }
 
-
 .section-title {
   text-align: center;
   font-size: 2.2rem;
@@ -48,11 +53,17 @@ body {
   line-height: 1.8;
 }
 
+
+/* =========================
+   BUTTONS
+========================= */
+
 .btn,
 .github-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   padding: 14px 32px;
   border-radius: 999px;
   text-decoration: none;
@@ -61,6 +72,7 @@ body {
   background: linear-gradient(135deg, #9b5cff, #6f4cff);
   transition: all 0.3s ease;
   border: none;
+  cursor: pointer;
 }
 
 .btn.small {
@@ -79,6 +91,11 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(139, 92, 246, 0.45);
 }
+
+
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar {
   position: sticky;
@@ -138,6 +155,11 @@ body {
 .nav-links a:hover::after {
   width: 100%;
 }
+
+
+/* =========================
+   HERO SECTION
+========================= */
 
 .hero {
   padding: 90px 0 70px;
@@ -200,6 +222,11 @@ body {
   object-fit: cover;
 }
 
+
+/* =========================
+   EDUCATION SECTION
+========================= */
+
 .edu-card {
   background: var(--bg-card);
   padding: 26px 30px;
@@ -207,12 +234,28 @@ body {
   margin-bottom: 25px;
   border-left: 4px solid var(--accent);
   color: var(--text-muted);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-4px);
 }
 
 .edu-card h3 {
   color: #fff;
   margin-bottom: 6px;
 }
+
+.edu-card .edu-details {
+  color: var(--accent);
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+
+/* =========================
+   PROJECTS SECTION
+========================= */
 
 .project-grid {
   display: grid;
@@ -228,6 +271,7 @@ body {
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
+  will-change: transform;
 }
 
 .project-card:hover {
@@ -240,6 +284,7 @@ body {
 
 .project-card p {
   color: var(--text-muted);
+  line-height: 1.7;
   flex-grow: 1;
 }
 
@@ -250,6 +295,11 @@ body {
   margin-top: 22px;
   flex-wrap: wrap;
 }
+
+
+/* =========================
+   SKILLS SECTION
+========================= */
 
 .skills {
   padding: 70px 0;
@@ -266,6 +316,11 @@ body {
   padding: 35px 30px;
   border-radius: 22px;
   border: 2px solid var(--border-soft);
+  transition: transform 0.3s ease;
+}
+
+.skills-card:hover {
+  transform: translateY(-4px);
 }
 
 .skills-card.full {
@@ -294,42 +349,95 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--text-main);
   font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.skills-list span:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
 }
 
 .skills-list i {
   color: var(--accent);
 }
 
-.contact-form {
-  max-width: 600px;
-  margin: auto;
-}
 
-.contact-form textarea {
-  width: 100%;
-  padding: 16px;
-  border-radius: 14px;
-  border: 1px solid var(--border-soft);
-  background: #0f1022;
-  color: #fff;
-  margin-bottom: 20px;
-  resize: none;
-}
-
-.contact-form textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-}
+/* =========================
+   CONTACT SECTION
+========================= */
 
 .email {
-  margin-top: 25px;
+  margin-top: 16px;
   text-align: center;
+  color: var(--text-muted);
+}
+
+.email i {
+  color: var(--accent);
+  margin-right: 8px;
 }
 
 .email a {
   color: var(--accent);
   text-decoration: none;
 }
+
+.email a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border-soft);
+  background: #0f1022;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 130px;
+  margin-bottom: 0;
+}
+
+.contact-form button {
+  align-self: center;
+}
+
+.form-status {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 .footer {
   border-top: 1px solid var(--border-soft);
@@ -340,19 +448,63 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
 }
 
 .social-icons a {
   margin-left: 18px;
   font-size: 1.2rem;
   color: var(--text-muted);
+  transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
   color: var(--accent);
 }
 
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.hero-text,
+.image-box {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card,
+.skills-card,
+.edu-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.project-card.show,
+.skills-card.show,
+.edu-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
 @media (max-width: 900px) {
+
   .hero-container {
     flex-direction: column;
     text-align: center;
@@ -375,55 +527,130 @@ body {
     grid-column: span 1;
   }
 
+  .nav-links {
+    display: none;
+  }
+
   .footer-container {
     flex-direction: column;
     gap: 15px;
   }
+}
+
+
+@media (max-width: 600px) {
+
+  .section {
+    padding: 45px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 28px;
+  }
+
+  .hero {
+    padding: 65px 0 50px;
+  }
+
+  .hero-text h2 {
+    font-size: 2.3rem;
+  }
+
+  .hero-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card {
+    padding: 25px;
+  }
+
+  .skills {
+    padding: 50px 0;
+  }
+
+  .skills-card {
+    padding: 28px 20px;
+  }
+
+  .skills-list {
+    gap: 12px;
+  }
+
+  .skills-list span {
+    padding: 9px 14px;
+    font-size: 0.88rem;
+  }
+
+  .edu-card {
+    padding: 22px 20px;
+  }
+
+  .contact-form {
+    margin-top: 25px;
+  }
+}
+
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+
+/* Mobile Menu Button */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile Navigation */
+@media (max-width: 900px) {
+  .navbar-container {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    margin-right: 18px;
+  }
 
   .nav-links {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: #14152b;
+    border: 1px solid var(--border-soft);
+    border-radius: 0 0 15px 15px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 }
-
-
-/* Smooth hover for project cards */
-.project-card {
-  will-change: transform;
-}
-
-/* Hero section fade-in animation */
-.hero-text, .image-box {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Footer improvements for small screens */
-.footer-container {
-  flex-direction: column;
-  gap: 10px;
-  text-align: center;
-}
-
-.project-card,
-.skills-card,
-.edu-card {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease-out;
-}
-
-.project-card.show,
-.skills-card.show,
-.edu-card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
