@@ -16,26 +16,40 @@
 <body>
 
   <!-- ===== NAVBAR ===== -->
-  <header class="navbar">
-    <div class="container navbar-container">
-      <div class="logo">
-        <span class="logo-icon">&lt;/&gt;</span>
-        <span class="logo-text">Developer</span>
-      </div>
+  
+<header class="navbar">
+  <div class="container navbar-container">
 
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <a href="https://github.com/siddhu0704" target="_blank" class="github-btn">
-        GitHub
-      </a>
+    <div class="logo">
+      <span class="logo-icon">&lt;/&gt;</span>
+      <span class="logo-text">Developer</span>
     </div>
-  </header>
+
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <a href="https://github.com/siddhu0704"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="github-btn">
+      GitHub
+    </a>
+
+  </div>
+</header>
+
 
   <!-- ===== HERO + ABOUT (MERGED) ===== -->
   <section id="about" class="hero">
@@ -53,74 +67,94 @@
         </p>
 
         <div class="hero-btn">
-          <a href="Siddhant_S_Ghanekar_IT_Resume.pdf" class="btn" download>
-            Download CV
+          <a href="Siddhant_Ghanekar_CV.pdf" class="btn" download>
+            Download Resume
           </a>
         </div>
       </div>
 
       <div class="hero-image">
-        <div class="image-box"><img src="53651 Siddhant.jpg" alt="Siddhant Ghanekar - Full Stack Developer">
+        <div class="image-box"><img src="siddhant.jpeg" alt="Siddhant Ghanekar - Full Stack Developer">
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===== EDUCATION ===== -->
- <section id="education" class="section">
+ 
+<section id="education" class="section">
   <div class="container">
     <h2 class="section-title">Education</h2>
 
+    <!-- Graduation -->
     <div class="edu-card">
       <h3>B.Sc. in Information Technology</h3>
       <p>M.L. Dahanukar College of Commerce</p>
       <p>University of Mumbai</p>
+      <p class="edu-details">
+        2025 | CGPA: 6.12
+      </p>
     </div>
 
+    <!-- HSC -->
     <div class="edu-card">
-      <h3>HSC (Science)</h3>
+      <h3>HSC (12th - Science)</h3>
       <p>Sathaye College of Commerce, Science & Arts</p>
-      <p>Maharashtra Board</p>
+      <p>Maharashtra State Board</p>
+      <p class="edu-details">
+        2021 | Percentage: 73%
+      </p>
     </div>
 
+    <!-- SSC -->
     <div class="edu-card">
-      <h3>SSC</h3>
+      <h3>SSC (10th)</h3>
       <p>Patuck Technical High School</p>
-      <p>Maharashtra Board</p>
+      <p>Maharashtra State Board</p>
+      <p class="edu-details">
+        2019 | Percentage: 61%
+      </p>
     </div>
 
+    <!-- Professional Training -->
     <div class="edu-card">
       <h3>Full Stack Web Development</h3>
       <p>NTech Global Solutions</p>
+      <p class="edu-details">
+        Certification Completed | November 2025
+      </p>
     </div>
+
   </div>
 </section>
 
+
   <!-- ===== PROJECTS ===== -->
-  <section id="projects" class="section">
+ 
+<section id="projects" class="section">
   <div class="container">
-    <h2 class="section-title">Projects</h2>
+    <h2 class="section-title">My Projects</h2>
 
     <div class="project-grid">
 
       <!-- DGcom Web Design -->
       <div class="project-card">
         <h3>DGcom Web Design</h3>
-        <p>Responsive company website built using HTML, CSS, and Bootstrap.</p>
+        <p>A responsive company website designed using HTML, CSS, and Bootstrap with a clean and user-friendly layout.</p>
         <div class="project-links">
           <a href="https://siddhu0704.github.io/DGcom-web-design/" target="_blank" class="btn small">
-            View
+            Live Demo 
           </a>
         </div>
       </div>
 
       <!-- Nxtstep -->
       <div class="project-card">
-        <h3>Nxtstep</h3>
-        <p>Responsive shoe store website using HTML, CSS & JavaScript.</p>
+        <h3>Nxtstep – Shoe Store</h3>
+        <p>An online shoe store website built with HTML, CSS, and JavaScript, featuring a responsive design.</p>
         <div class="project-links">
           <a href="https://siddhu0704.github.io/nxtstep/main.html" target="_blank" class="btn small">
-            View
+            Live Demo 
           </a>
         </div>
       </div>
@@ -128,10 +162,10 @@
       <!-- Todo List Web App -->
       <div class="project-card">
         <h3>Todo List Web App</h3>
-        <p>Interactive todo list application with add, edit, and delete functionality using JavaScript.</p>
+        <p>A simple task management application with functionality to add, edit, and delete tasks using JavaScript.</p>
         <div class="project-links">
           <a href="https://siddhu0704.github.io/todo_lidt/" target="_blank" class="btn small">
-            View
+            Live Demo 
           </a>
         </div>
       </div>
@@ -139,10 +173,10 @@
       <!-- HR Management System -->
       <div class="project-card">
         <h3>HR Management System</h3>
-        <p>Employee and attendance management system developed using Python.</p>
+        <p>A Python-based application for managing employee records and attendance.</p>
         <div class="project-links">
           <a href="https://github.com/siddhu0704/HR_system" target="_blank" class="btn small">
-            View
+            View on GitHub 
           </a>
         </div>
       </div>
@@ -150,10 +184,10 @@
       <!-- Expenscio -->
       <div class="project-card">
         <h3>Expenscio</h3>
-        <p>Expense tracking mobile app built using Flutter & Firebase.</p>
+        <p>A mobile expense tracking application developed using Flutter and Firebase to manage personal expenses.</p>
         <div class="project-links">
           <a href="#" target="_blank" class="btn small">
-            View
+            View Project
           </a>
         </div>
       </div>
@@ -161,10 +195,10 @@
       <!-- Banking System -->
       <div class="project-card">
         <h3>Banking System</h3>
-        <p>Banking application using Python & MySQL.</p>
+        <p>A banking application developed using Python and MySQL for basic banking operations and data management.</p>
         <div class="project-links">
           <a href="https://github.com/siddhu0704/BankingSystem" target="_blank" class="btn small">
-            View
+            View on GitHub 
           </a>
         </div>
       </div>
@@ -174,72 +208,88 @@
 </section>
 
   <!-- ===== SKILLS ===== -->
-  <section id="skills" class="skills">
-    <div class="container">
-      <h2 class="section-title">Skills</h2>
+ 
+<section id="skills" class="skills">
+  <div class="container">
+    <h2 class="section-title">Technical Skills</h2>
 
-      <div class="skills-grid">
+    <div class="skills-grid">
 
-        <div class="skills-card">
-          <h3>Frontend</h3>
-          <div class="skills-list">
-            <span><i class="fab fa-html5"></i> HTML</span>
-            <span><i class="fab fa-css3-alt"></i> CSS</span>
-            <span><i class="fab fa-js"></i> JavaScript</span>
-            <span><i class="fab fa-angular"></i> Angular</span>
-            <span><i class="fab fa-bootstrap"></i> Bootstrap</span>
-          </div>
+      <div class="skills-card">
+        <h3>Frontend Development</h3>
+        <div class="skills-list">
+          <span><i class="fab fa-html5"></i> HTML5</span>
+          <span><i class="fab fa-css3-alt"></i> CSS3</span>
+          <span><i class="fab fa-js"></i> JavaScript</span>
+          <span><i class="fab fa-react"></i> React.js (Basic)</span>
+          <span><i class="fab fa-bootstrap"></i> Bootstrap</span>
+          <span><i class="fas fa-mobile-alt"></i> Responsive Design</span>
         </div>
-
-        <div class="skills-card">
-          <h3>Backend</h3>
-          <div class="skills-list">
-            <span><i class="fab fa-python"></i> Python</span>
-            <span class="skill-pill text-only">Django</span>
-            <span><i class="fas fa-database"></i> MySQL</span>
-            <span><i class="fas fa-fire"></i> Firebase</span>
-          </div>
-        </div>
-
-        <div class="skills-card full">
-          <h3>Tools & Others</h3>
-          <div class="skills-list">
-            <span><i class="fab fa-git-alt"></i> Git</span>
-            <span><i class="fab fa-github"></i> GitHub</span>
-            <span><i class="fas fa-code"></i> VS Code</span>
-            <span><i class="fas fa-chart-line"></i> Power BI</span>
-          </div>
-        </div>
-
       </div>
+
+      <div class="skills-card">
+        <h3>Backend & Database</h3>
+        <div class="skills-list">
+          <span><i class="fab fa-python"></i> Python</span>
+          <span><i class="fas fa-server"></i> Django</span>
+          <span><i class="fas fa-database"></i> MySQL</span>
+          <span><i class="fas fa-fire"></i> Firebase</span>
+        </div>
+      </div>
+
+      <div class="skills-card full">
+        <h3>Tools & Technologies</h3>
+        <div class="skills-list">
+          <span><i class="fab fa-git-alt"></i> Git</span>
+          <span><i class="fab fa-github"></i> GitHub</span>
+          <span><i class="fas fa-code"></i> VS Code</span>
+          <span><i class="fas fa-cloud"></i> Vercel</span>
+          <span><i class="fas fa-mobile-alt"></i> Flutter</span>
+          <span><i class="fas fa-code-branch"></i> jQuery</span>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- ===== CONTACT ===== -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
+  
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
 
-      <form class="contact-form">
-        <textarea rows="5" placeholder="Write your message..." required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
+    <p class="email">
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:ghanekarsiddhant158@gmail.com">
+        ghanekarsiddhant158@gmail.com
+      </a>
+    </p>
 
-      <p class="email">
-        Email:
-        <a href="mailto:ghanekarsiddhant158@gmail.com">
-          ghanekarsiddhant158@gmail.com
-        </a>
-      </p>
-    </div>
-  </section>
+    <p class="email">
+      <i class="fas fa-map-marker-alt"></i>
+      Santacruz, Mumbai, India
+    </p> <br>
+
+    <form class="contact-form">
+      <textarea name="message" rows="5"
+                placeholder="Write your message..." required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+      <p class="form-status" aria-live="polite"></p>
+    </form>
+
+  </div>
+</section>
+
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container footer-container">
       <p>© 2025 Siddhant S. Ghanekar</p>
       <div class="social-icons">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/siddhant-ghanekar-944649397"><i class="fab fa-linkedin"></i></a>
         <a href="https://twitter.com/siddhu1179" target="_blank"><i class="fab fa-twitter"></i></a>
         <a href="https://instagram.com/sidddhu___" target="_blank"><i class="fab fa-instagram"></i></a>
       </div>
